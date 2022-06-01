@@ -33,7 +33,34 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  head() {
+    if (process.client) {
+      if(localStorage.getItem('authToken') >= 2) {
+        this.cur = 'green';
+      } else {
+        this.cur = 'red';
+      }
+    }
+    return {
+      link: [
+        {
+          rel: "stylesheet",
+          href: `/${this.cur}.css`
+        }
+      ]
+    };
+  },
+  data() {
+    return {
+      cur: "red"
+    };
+  },
+  created() {
+    if(process.client) {
+      localStorage.setItem("authToken", Math.floor(Math.random() * 5));
+    }
+  },
 }
 </script>
 <style lang="scss">

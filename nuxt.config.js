@@ -5,7 +5,7 @@
 // }
 const env = require('dotenv').config()
 
-console.log(Math.floor(Math.random() * 5));
+// console.log(Math.floor(Math.random() * 5));
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   env: env.parsed,
@@ -27,7 +27,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    Math.floor(Math.random() * 5) > 1 ? '~/assets/scss/custom-green.scss' : '~/assets/scss/custom-red.scss'
+    // Math.floor(Math.random() * 5) > 1 ? '~/assets/scss/custom-green.scss' : '~/assets/scss/custom-red.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
