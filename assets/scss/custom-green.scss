@@ -1,0 +1,7 @@
+$theme-colors: (
+  "primary": #2ad747,
+  "danger": #e20fd02b,
+  "dark" : #000000,
+);
+@import '~/node_modules/bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
